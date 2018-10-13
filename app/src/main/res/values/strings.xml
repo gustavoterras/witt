@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">WITT</string>
+
+    <string name="day">Days</string>
+    <string name="result_of_search">Result of search:</string>
+    <string name="result_fail">Sorry!\n We didn\'t find anything :(</string>
+    <string name="select_days_message">Select number of days:</string>
+    <string name="select_city_message">Select one city to continue:</string>
+    <string name="select_weather_message">Select the desired climates:</string>
+
+</resources>

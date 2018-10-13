@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">WITT</string>
+
+    <string name="day">Dias</string>
+    <string name="result_of_search">Resultado da perquisa:</string>
+    <string name="result_fail">Desculpe!\n Nós não encontramos nada :(</string>
+    <string name="select_days_message">Selecione o número de dias</string>
+    <string name="select_city_message">Selecione uma cidade para continuar</string>
+    <string name="select_weather_message">Selecione os climas desejados:</string>
+
+</resources>

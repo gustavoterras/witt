@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.tw.witt.viewModel.SelectWeatherViewModel" />
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:maxHeight="150dp"
+                android:minHeight="100dp"
+                android:text="@string/select_weather_message"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:text="@={viewModel.maxTemp}"
+                android:layout_width="100dp"
+                android:hint="Max Temp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:text="@={viewModel.minTemp}"
+                android:layout_width="100dp"
+                android:hint="MinTemp"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:recyclerView_configuration="@{viewModel.recyclerViewConfiguration}" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:contentDescription="@null"
+            android:onClick="@{() -> viewModel.nextStep()}"
+            android:padding="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_double_down"
+            app:shake_animation="@{viewModel.valid ? View.VISIBLE : View.GONE}" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</layout>
